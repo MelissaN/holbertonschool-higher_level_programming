@@ -8,22 +8,22 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *tmp_fast = NULL;
-	listint_t *tmp_slow = NULL;
+/*	listint_t *tmp_slow = NULL; */
 	listint_t *fast = NULL;
 	listint_t *slow = NULL;
 
 	if (!list)
 		return (0);
 
-	tmp_fast = list;
 	fast = list;
 	slow = list;
 
 	while (1) /* if match is found, cycle is found */
 	{
 		tmp_fast = fast;
-		tmp_slow = slow;
-		if (tmp_fast->next->next != NULL && tmp_slow->next != NULL)
+/*		tmp_slow = slow; */
+/*		if (tmp_fast->next->next != NULL && tmp_slow->next != NULL) */
+		if (tmp_fast->next != NULL && tmp_fast->next->next != NULL)
 		{
 			fast = fast->next->next;
 			slow = slow->next;
