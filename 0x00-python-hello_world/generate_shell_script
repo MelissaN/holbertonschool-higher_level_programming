@@ -1,9 +1,0 @@
-#!/bin/bash
-
-
-SHELL_SCRIPT="#!/bin/bash"
-PY_SHELL_SCRIPT="#!/usr/bin/python3"
-
-cat <<- EOF
-$PY_SHELL_SCRIPT
-EOF
