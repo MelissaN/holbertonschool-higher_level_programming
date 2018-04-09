@@ -8,6 +8,7 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *tmp_fast = NULL;
+	listint_t *tmp_slow = NULL;
 	listint_t *fast = NULL;
 	listint_t *slow = NULL;
 
@@ -21,7 +22,8 @@ int check_cycle(listint_t *list)
 	while (1) /* if match is found, cycle is found */
 	{
 		tmp_fast = fast;
-		if (tmp_fast->next->next != NULL)
+		tmp_slow = slow;
+		if (tmp_fast->next->next != NULL && tmp_slow->next != NULL)
 		{
 			fast = fast->next->next;
 			slow = slow->next;
