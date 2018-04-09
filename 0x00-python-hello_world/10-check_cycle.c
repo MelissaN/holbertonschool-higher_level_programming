@@ -8,7 +8,6 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *tmp_fast = NULL;
-/*	listint_t *tmp_slow = NULL; */
 	listint_t *fast = NULL;
 	listint_t *slow = NULL;
 
@@ -18,17 +17,16 @@ int check_cycle(listint_t *list)
 	fast = list;
 	slow = list;
 
-	while (1) /* if match is found, cycle is found */
+	while (1)
 	{
+		/*traverse through nodes as long as linked list node exists*/
 		tmp_fast = fast;
-/*		tmp_slow = slow; */
-/*		if (tmp_fast->next->next != NULL && tmp_slow->next != NULL) */
 		if (tmp_fast->next != NULL && tmp_fast->next->next != NULL)
 		{
 			fast = fast->next->next;
 			slow = slow->next;
 
-			if (fast->n == slow->n)
+			if (fast->n == slow->n) /*if nodes match, cycle found*/
 				return (1);
 		}
 		else
