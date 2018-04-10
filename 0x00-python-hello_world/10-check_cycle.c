@@ -21,7 +21,7 @@ int check_cycle(listint_t *list)
 			fast = fast->next->next;
 			slow = slow->next;
 
-			if (fast->n == slow->n) /*if nodes match, cycle found*/
+			if (fast == slow) /*if nodes match, cycle found*/
 				return (1);
 		}
 		else
