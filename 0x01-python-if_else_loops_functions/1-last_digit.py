@@ -14,5 +14,5 @@ elif remainder is 0:
     print("Last digit of {} is {} and is 0"
           .format(number, remainder))
 else:
-    print("Last digit of {} is {} and is less than 6 and is not 0"
+    print("Last digit of {} is {} and is less than 6 and not 0"
           .format(number, remainder))
