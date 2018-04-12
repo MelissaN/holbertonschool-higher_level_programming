@@ -3,14 +3,12 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
 
-    if len(argv) == 1:
-        print("{:s}".format("Usage: ./100-my_calculator.py <a> <operator> <b>"))
+    if (len(argv) == 1) or (len(argv) != 4):
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    if (argv[2] is not "+" and
-        argv[2] is not "-" and
-        argv[2] is not "*" and
-        argv[2] is not "/"):
+    if (argv[2] is not "+" and argv[2] is not "-" and
+            argv[2] is not "*" and argv[2] is not "/"):
         print("{:s}".format(
             "Unknown operator. Available operators:+, -, * and /"))
         exit(1)
