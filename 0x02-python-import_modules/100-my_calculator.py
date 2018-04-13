@@ -4,13 +4,13 @@ if __name__ == "__main__":
     from sys import argv
 
     if (len(argv) != 4):
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Usage: {:s} <a> <operator> <b>".format(argv[0]))
         exit(1)
 
     if (argv[2] is not "+" and argv[2] is not "-" and argv[2] is not "*" and
             argv[2] is not "/"):
         print("{:s}".format(
-            "Unknown operator. Available operators:+, -, * and /"))
+            "Unknown operator. Available operators: +, -, * and /"))
         exit(1)
 
     a = int(argv[1])
