@@ -32,7 +32,7 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 
-	for (i = 0; i < (size/2); i++)
+	for (i = 0; i <= (size/2); i++)
 	{
 		if (data[i] != data[size - i - 1])
 			return (0);
