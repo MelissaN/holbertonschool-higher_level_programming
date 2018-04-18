@@ -7,3 +7,6 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 print("{:d}".format(i), end="")
         print()
+
+# for row in matrix:
+#     print(" ".join("{:d}".format(i) for i in row))
