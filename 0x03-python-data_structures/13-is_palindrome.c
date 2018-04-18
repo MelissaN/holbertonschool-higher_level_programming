@@ -9,7 +9,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *tmp = *head;
 	unsigned int size = 0, i = 0;
-	int data[1024];
+	int data[10240];
 
 	if (head == NULL) /* non-existing list is not */
 		return (0);
