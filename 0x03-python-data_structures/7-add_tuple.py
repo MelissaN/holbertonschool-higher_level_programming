@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    if len(tuple_b) is 0:
-        return (tuple(i + j for i, j in zip(tuple_a, (0,0))))
-    elif len(tuple_b) is 1:
-        new = tuple_b + (0,)
-        return (tuple(i + j for i, j in zip(tuple_a, new)))
-    else:
-        return (tuple(i + j for i, j in zip(tuple_a, tuple_b[:2])))
+    a = len(tuple_a)
+    b = len(tuple_b)
+
+    sums = ((tuple_a[0] if a > 0 else 0) + (tuple_b[0] if b > 0 else 0),
+           (tuple_a[1] if a > 1 else 0) + (tuple_b[1] if b > 1 else 0))
+
+    return sums
