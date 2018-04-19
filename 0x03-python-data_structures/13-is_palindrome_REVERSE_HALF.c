@@ -2,7 +2,7 @@
 
 /**
  * is_pal - matches and returns if palindrome
- * @head: ptr to head of list
+ * @tmp: ptr to head of list (copy, not modifying)
  * @reversed: ptr to head of reversed list
  * Return: 0 if not, 1 if yes
  */
