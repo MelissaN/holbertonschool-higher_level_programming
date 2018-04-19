@@ -6,14 +6,14 @@
  * @reversed: ptr to head of reversed list
  * Return: 0 if not, 1 if yes
  */
-int is_pal(listint_t **head, listint_t *reversed)
+int is_pal(listint_t *tmp, listint_t *reversed)
 {
 	while (reversed != NULL)
 	{
-		if (reversed->n != (*head)->n)
+		if (reversed->n != tmp->n)
 			return (0);
 		reversed = reversed->next;
-		*head = (*head)->next;
+		tmp = tmp->next;
 	}
 	return (1);
 }
@@ -47,9 +47,10 @@ listint_t *reverse(listint_t **midway_head)
 int is_palindrome(listint_t **head)
 {
 	int result = 1;
+	listint_t *tmp = *head;
 	listint_t *slow = *head;
 	listint_t *fast = *head;
-	listint_t *mid = NULL;
+	listint_t *detached = NULL;
 	listint_t *reversed = NULL;
 
 	if (head == NULL) /* non-existing list is not */
@@ -63,15 +64,21 @@ int is_palindrome(listint_t **head)
 	{
 		while (fast != NULL && fast->next != NULL) /*find midpoint */
 		{
+			detached = slow;
 			slow = slow->next;
 			fast = fast->next->next;
 		}
 		if (fast != NULL)
+		{
+			detached = slow;
 			slow = slow->next;
-		mid = slow;
+		}
 
-		reversed = reverse(&mid); /* reverse midpt to compare */
-		result = is_pal(head, reversed);
+		reversed = reverse(&slow); /* reverse midpt to compare */
+		result = is_pal(tmp, reversed);
+
+		reversed = reverse(&reversed); /* reverse midpt & reattach */
+		detached->next = reversed;
 
 		return (result);
 	}
