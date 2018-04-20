@@ -7,6 +7,6 @@ def weight_average(my_list=[]):
             (weight, occurence) = tup
             total += (weight * occurence)
             frequency += occurence
-        return (total/frequency)
+        return (total/frequency) if frequency > 0 else 0
     else:
         return (0)
