@@ -6,3 +6,6 @@ def update_dictionary(a_dictionary, key, value):
         return(a_dictionary)
     else:
         return None
+
+# creates if non-existent; updates even if exists
+# a_dictionary[key] = value
