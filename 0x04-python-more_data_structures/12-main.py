@@ -30,14 +30,14 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 roman_number = "XX"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = 123
+roman_number = "MMMCM"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = "123"
+roman_number = "MMMCMX"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = None
+roman_number = "MMMCMXC"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = "I"
+roman_number = "MMMCMXCIX"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))

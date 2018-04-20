@@ -16,7 +16,7 @@ def roman_to_int(roman_string):
         sum = 0
         i = 0
         while(i < len(decode)):
-            if decode[i] == decode[-1]:
+            if i is (len(decode) - 1):
                 sum += decode[i]
             elif decode[i] < decode[i + 1]:
                 sum -= decode[i]
