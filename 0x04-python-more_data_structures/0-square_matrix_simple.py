@@ -6,3 +6,5 @@ def square_matrix_simple(matrix=[]):
             new.append(list(map(lambda x: x**2, rows)))
         return (new)
     return None
+
+# return[[elem**2 in row] for row in matrix]
