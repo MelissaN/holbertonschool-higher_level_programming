@@ -8,3 +8,4 @@ def square_matrix_simple(matrix=[]):
     return None
 
 # return[[elem**2 in row] for row in matrix]
+# return(list(map(lambda x: x**2, list)) for list in matrix)
