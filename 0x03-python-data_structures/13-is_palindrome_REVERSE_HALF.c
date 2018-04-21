@@ -23,10 +23,10 @@ int is_pal(listint_t *tmp, listint_t *reversed)
  * @midway_head: ptr to the middle of the linked list
  * Return: return head of reversed list (tail of original list)
  */
-listint_t *reverse(listint_t **midway_head)
+listint_t *reverse(listint_t *midway_head)
 {
 	listint_t *prev = NULL;
-	listint_t *curr = *midway_head;
+	listint_t *curr = midway_head;
 	listint_t *next = NULL;
 
 	while (curr != NULL)
@@ -74,10 +74,10 @@ int is_palindrome(listint_t **head)
 			slow = slow->next;
 		}
 
-		reversed = reverse(&slow); /* reverse midpt to compare */
+		reversed = reverse(slow); /* reverse midpt to compare */
 		result = is_pal(tmp, reversed);
 
-		reversed = reverse(&reversed); /* reverse midpt & reattach */
+		reversed = reverse(reversed); /* reverse midpt & reattach */
 		detached->next = reversed;
 
 		return (result);

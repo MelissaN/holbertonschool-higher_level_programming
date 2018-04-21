@@ -8,26 +8,16 @@
  */
 int is_pal(listint_t **start, listint_t *end)
 {
-	int flag = 1;
+	if (end == NULL) /* pop off stack once ptr hits null; ptr is at end */
+		return (1);
 
-	if (*start == NULL)
-		return (0);
-
-	/* hold ptr to start and recursively move ptr to end */
-	if (end->next != NULL)
-		flag = is_pal(start, end->next);
-
-	if (flag == 0)
-		return (0);
-
-	/* if no match, change flag so next recursive call returns no */
-	if ((*start)->n != end->n)
-        	return (0);
-
-	/* if start and end match, move starting ptr down, end ptr is popped */
-	*start = (*start)->next;
-
-	return (flag);
+	/* recursively move end ptr to end; match; move ptrs inwards */
+	if (is_pal(start, end->next) && ((*start)->n == end->n))
+	{
+		*start = (*start)->next;
+		return (1);
+	}
+	return (0);
 }
 
 /**
@@ -42,6 +32,7 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL) /* non-existing list is not */
 		return (0);
-
+	if (*head == NULL) /* one node list is palindrome */
+		return (1);
 	return (is_pal(&start, end));
 }
