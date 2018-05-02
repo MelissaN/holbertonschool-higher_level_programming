@@ -14,10 +14,10 @@
 4. define getter and setter for size
 5. define print method to print square with "#"'s
 6. define private position attribute to use in printing offsets
--100. Singly Linked List - create head, insert nodes, print with ```__str__```
--101. define ```__str__``` method to print square if called with print()
--102. define comparator methods
--103. recreate code to match Bytecode (re: class, import, private attribute)
+100. 100 - Singly Linked List - create head, insert nodes, print with ```__str__```
+101. 101 - define ```__str__``` method to print square if called with print()
+102. 102 - define comparator methods
+103. 103 - recreate code to match Bytecode (re: class, import, private attribute)
 
 ### Environment
 * Language: Python 3.4.3
