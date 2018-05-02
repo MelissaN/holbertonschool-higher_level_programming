@@ -1,7 +1,7 @@
 ## Python - Classes and Objects
 > Each file in this repository holds code that illustrates an essential concept of programming,
 > specific to the Python programming language:
-> classes, instances, private/public fields/attributes, methods/functions, __str__ to print,
+> classes, instances, private/public fields/attributes, methods/functions, ```__str__``` to print,
 > comparator methods (```!=``` ```__ne__```, ```==``` ```__eq__```, ```>=``` ```__ge__```, ```>``` ```__gt__```, ```<``` ```__lt__```, ```<=``` ```__lt__```)
 
 ### Description of what each file shows:
@@ -14,8 +14,8 @@
 4. define getter and setter for size
 5. define print method to print square with "#"'s
 6. define private position attribute to use in printing offsets
-100. Singly Linked List - create head, insert nodes, print with __str__
-101. define __str__ method to print square if called with print()
+100. Singly Linked List - create head, insert nodes, print with ```__str__```
+101. define ```__str__``` method to print square if called with print()
 102. define comparator methods
 103. recreate code to match Bytecode (re: class, import, private attribute)
 
