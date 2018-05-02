@@ -66,7 +66,7 @@ class Square:
         """
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """
         Setter
@@ -91,6 +91,9 @@ class Square:
         return (self.__size)**2
 
     def my_print(self):
-        print("\n" * self.__position[1], end="")
-        print("\n".join([" " * self.__position[0] +
-                         "#" * self.__size for rows in range(self.__size)]))
+        if self.__size == 0:
+            print("")
+        else:
+            print("\n" * self.__position[1], end="")
+            print("\n".join([" " * self.__position[0] +
+                             "#" * self.__size for rows in range(self.__size)]))
