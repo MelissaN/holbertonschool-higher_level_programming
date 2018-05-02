@@ -18,6 +18,8 @@ class Square:
         __init__(self, size, position)
         size(self)
         size(self, value)
+        position(self)
+        position(self, value)
         area(self)
         print(self)
     """
