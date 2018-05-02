@@ -21,7 +21,7 @@ class Square:
         position(self)
         position(self, value)
         area(self)
-        print(self)
+        my_print(self)
     """
 
     def __init__(self, size=0, position=(0, 0)):
