@@ -1,3 +1,5 @@
+# run test with python3 -m doctest -v ./tests/4-print_square.txt
+
 First import method to test
 >>> print_square= __import__('4-print_square').print_square
 

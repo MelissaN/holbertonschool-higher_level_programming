@@ -1,3 +1,5 @@
+# run test with python3 -m doctest -v ./tests/3-say_my_name.txt
+
 First import method to test
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 

@@ -1,3 +1,5 @@
+# run test with python3 -m doctest -v ./tests/5-text_indentation.txt
+
 First import method to test
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 

@@ -1,3 +1,5 @@
+# run test with python3 -m doctest -v ./tests/2-matrix_divided.txt
+
 First import method to test
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
