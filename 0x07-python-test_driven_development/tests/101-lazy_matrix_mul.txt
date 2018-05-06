@@ -1,0 +1,23 @@
+# run test with python3 -m doctest -v ./tests/101-lazy_matrix_mul.txt
+
+First import method to test
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+SUCCESS CASES:
+
+Test signed and unsigned ints and floats in same size lists in list matrix:
+     >>> m_a = [[1, 2], [3, 4]]
+     >>> m_b = [[2, 0], [1, 2]]
+     >>> print(lazy_matrix_mul(m_a, m_b))
+     [[4, 4], [10, 8]]
+
+     >>> m_a = [[-2.0, -3.0]]
+     >>> m_b = [[-2.0], [-4.0]]
+     >>> print(lazy_matrix_mul(m_a, m_b))
+     [[16.0]]
+
+FAIL CASES:
+
+Test empty matrix:
+Test different sized lists in matrix:
+Test matrix with other data types:
