@@ -33,6 +33,13 @@ Test empty matrix:
      ...
      ValueError: m_b can't be empty
 
+     >>> m_a = [[2, 0], [1, 2]]
+     >>> m_b = [[]]
+     >>> print(matrix_mul(m_a, m_b))
+     Traceback (most recent call last):
+     ...
+     ValueError: m_b can't be empty
+
 Test different sized lists in matrix:
      >>> m_a = [[1, 2], [1, 2]]
      >>> m_b = [[1, 2], [1, 2, 3, 4]]
@@ -46,7 +53,7 @@ Test different sized lists in matrix:
      >>> print(matrix_mul(m_a, m_b))
      Traceback (most recent call last):
      ...
-     ValueError: m_a and m_b can't be multiplied
+     TypeError: each row of m_a must should be of the same size
 
 Test matrix with other data types:
      >>> m_a = [["hey"], ["you"]]
