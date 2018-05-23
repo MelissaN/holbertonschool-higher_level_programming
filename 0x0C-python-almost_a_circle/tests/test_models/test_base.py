@@ -6,12 +6,24 @@ Unittest for Base Class
 """
 
 import unittest
+import pep8
 import json
 import os
 from models import base
 from models import rectangle
 Base = base.Base
 Rectangle = rectangle.Rectangle
+
+
+class TestPep8(unittest.TestCase):
+    """Pep8 models/base.py & tests/test_models/test_base.py"""
+    def test_pep8(self):
+        """Pep8"""
+        style = pep8.StyleGuide(quiet=False)
+        errors = 0
+        files = ["models/base.py", "tests/test_models/test_base.py"]
+        errors += style.check_files(files).total_errors
+        self.assertEqual(errors, 0, 'Need to fix Pep8')
 
 
 class TestBase(unittest.TestCase):
