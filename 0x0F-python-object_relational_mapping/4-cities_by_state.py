@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-return matching cities (table 'cities')
+return info from both tables (tables 'cities' 'states)
 parameters given to script: username, password, database
 """
 
