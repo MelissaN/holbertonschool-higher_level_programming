@@ -6,6 +6,7 @@ Defines class State
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+# from relationship_city import City
 
 Base = declarative_base()
 
