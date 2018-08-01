@@ -1,2 +1,1 @@
-#Time complexity of algo
 O(log(n))
