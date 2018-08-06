@@ -9,6 +9,6 @@ import urllib.request
 URL = sys.argv[1]
 
 if __name__ == "__main__":
-    with urllib.request.urlopen(URL) as response:
-        headers = response.info()
-        print(headers['X-Request-Id'])
+    req = urllib.request.Request(URL)
+    with urllib.request.urlopen(req) as response:
+        print(response.getheader('X-Request-Id'))
