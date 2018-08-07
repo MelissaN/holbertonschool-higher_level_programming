@@ -2,20 +2,6 @@
 > Fetching URL's with Python's urllib and Request. Resources: [Python's urllib](https://docs.python.org/3/howto/urllib2.html),
 > [Python's Request library](http://docs.python-requests.org/en/master/)
 
-### Description of what each file shows:
-Files that start with:
-0. 
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
-10.
-
 ### Environment
 * Language: Python 3.4.3
 * OS: Ubuntu 14.04 LTS
