@@ -15,4 +15,4 @@ if __name__ == "__main__":
     matching_ppl = r.json()
     print("Number of results: {}".format(matching_ppl.get('count')))
     for person in matching_ppl.get('results'):
-          print(person.get('name'))
+        print(person.get('name'))
