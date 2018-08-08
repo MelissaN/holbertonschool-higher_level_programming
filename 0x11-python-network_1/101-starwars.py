@@ -13,18 +13,21 @@ if __name__ == '__main__':
         pattern = argv[1]
     url = 'https://swapi.co/api/people/?search={}'.format(pattern)
     r = requests.get(url)
-    matching_names = r.json().get('results')
-    for person in matching_names:
-        print(person.get('name'))
+    print('Number of results: {}'.format(r.json().get('count')))
 
-    more = r.json().get('next')
-    page = 2
-    while more is not None:
-        url = 'https://swapi.co/api/people/?search={}&page={}'.format(
-            pattern, page)
-        r = requests.get(url)
+    if r.json().get('count') > 0:
         matching_names = r.json().get('results')
         for person in matching_names:
             print(person.get('name'))
+
         more = r.json().get('next')
-        page += 1
+        page = 2
+        while more is not None:
+            url = 'https://swapi.co/api/people/?search={}&page={}'.format(
+                pattern, page)
+            r = requests.get(url)
+            matching_names = r.json().get('results')
+            for person in matching_names:
+                print(person.get('name'))
+            more = r.json().get('next')
+            page += 1
