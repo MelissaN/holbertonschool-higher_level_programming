@@ -6,7 +6,7 @@ let newDic = {};
 for (let key in dict) {
   if (newDic[dict[key]] === undefined) {
     newDic[dict[key]] = []
-  };
+  }
   newDic[dict[key]].push(key);
 }
 
