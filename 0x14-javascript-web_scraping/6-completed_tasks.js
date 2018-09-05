@@ -3,11 +3,11 @@
 let url = process.argv[2];
 const request = require('request');
 
-request(url, function(err, response, body) {
+request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
-    dic = {};
+    let dic = {};
     let tasks = JSON.parse(body);
     for (let i in tasks) {
       if (dic[tasks[i].userId] === undefined) {
@@ -19,6 +19,6 @@ request(url, function(err, response, body) {
     }
     console.log(dic);
   } else {
-    console.log("Error code: " + response.statusCode);
+    console.log('Error code: ' + response.statusCode);
   }
 });
