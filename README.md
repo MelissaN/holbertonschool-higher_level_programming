@@ -4,7 +4,7 @@
 ### Environment
 * Languages: Python3.4.3, MySQL, SQLAlchemy, Javascript ES6, Node.js
 * OS: Ubuntu 14.04 LTS
-* Style guidelines: [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/) || [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) || [Javascript Standard](https://standardjs.com/rules.html) || [Javascript Sem\istandard](https://github.com/Flet/semistandard) || [Airbnb Javascript Style Guide](https://github.com/airb\nb/javascript) 
+* Style guidelines: [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/) || [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) || [Javascript Standard](https://standardjs.com/rules.html) || [Javascript Semistandard](https://github.com/Flet/semistandard) || [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) 
 
 ---
 ### Authors
