@@ -10,11 +10,12 @@ request(url, function (err, response, body) {
     let dic = {};
     let tasks = JSON.parse(body);
     for (let i in tasks) {
-      if (dic[tasks[i].userId] === undefined) {
-	dic[tasks[i].userId] = 0;
-      }
       if (tasks[i].completed) {
-	dic[tasks[i].userId]++;
+	if (dic[tasks[i].userId] === undefined) {
+	  dic[tasks[i].userId] = 1;
+	} else {
+	  dic[tasks[i].userId]++;
+	}
       }
     }
     console.log(dic);
